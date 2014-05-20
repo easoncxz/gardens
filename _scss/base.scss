@@ -47,8 +47,37 @@ nav {
     }
 }
 
+#content {
+    padding: 2em;
+}
+
 footer {
     width: 100%;
     padding: $padding;
     text-align: center;
 }  
+
+// -------------------------------------
+//
+// For the "index" page:
+//
+// -------------------------------------
+
+#window-frame {
+    overflow: scroll;
+    width: $full-width;
+
+    #window-slider {
+        width: 5 * $full-width;
+
+        .window-panel {
+            width: $full-width;
+            float: left;
+        }
+    }
+}
+
+#get-started-prompt {
+    width: $min-width;
+    margin: 1em auto;
+}

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="css/base.css" />
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
     <div id="wrapper">
@@ -9,22 +11,23 @@
             <div id="logo">Gardens By Design</div>
             <div id="search">
                 <form action="search.html" method="POST">
-                    <input type="text" />
+                    <input type="text"></input>
                 </form>
             </div>
-            <div class="clear" />
+            <div class="clear"></div>
         </header>
         <nav>
             <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <div class="clear" />
+                <li>Gardening Tutorial</li>
+                <li>Crops</li>
+                <li>Climates</li>
+                <li>Types of Space</li>
+                <li>Gardening Tools</li>
+                <div class="clear"></div>
             </ul>
         </nav>
         <div id="content">
-            Content goes here.
+{{ content }}
         </div>
         <footer>
             Footer here.

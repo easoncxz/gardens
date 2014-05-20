@@ -34,7 +34,23 @@ nav {
       float: left;
       border: 1px dashed white; }
 
+#content {
+  padding: 2em; }
+
 footer {
   width: 100%;
   padding: 10pt;
   text-align: center; }
+
+#window-frame {
+  overflow: scroll;
+  width: 800px; }
+  #window-frame #window-slider {
+    width: 4000px; }
+    #window-frame #window-slider .window-panel {
+      width: 800px;
+      float: left; }
+
+#get-started-prompt {
+  width: 480px;
+  margin: 1em auto; }
