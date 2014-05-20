@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+#wrapper {
+  max-width: 800px;
+  min-width: 480px;
+  margin: 0 auto;
+  background-color: #eee; }
+
+header {
+  padding: 10pt; }
+
+#logo {
+  font-size: 30pt;
+  padding: 0.5em 0.5em;
+  float: left; }
+
+#search {
+  float: right; }
+
+.clear {
+  clear: both; }
+
+nav {
+  background-color: black;
+  padding: 10pt; }
+  nav ul {
+    list-style-type: none; }
+    nav ul li {
+      color: white;
+      margin-right: 10pt;
+      padding: 0 10pt;
+      float: left;
+      border: 1px dashed white; }
+
+footer {
+  width: 100%;
+  padding: 10pt;
+  text-align: center; }
