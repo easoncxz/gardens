@@ -1,0 +1,138 @@
+---
+layout: base
+---
+<div id="crops">
+    <h1>Exploring Crops</h1>
+    <ul id="filter-conditions">
+        <li>
+            <p>Season</p>
+            <ul>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="season"
+                    value="spring">Spring</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="season"
+                    value="summer">Summer</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="season"
+                    value="autume">Autumn</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="season"
+                    value="winter">Winter</input>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p>Space type</p>
+            <ul>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="space-type"
+                    value="patio">Patio</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="space-type"
+                    value="balcony">Balcony</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="space-type"
+                    value="rooftop">Rooftop</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="space-type"
+                    value="other">Other</input>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p>Difficult</p>
+            <ul>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="difficulty"
+                    value="beginner">Beginner-friendly</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="difficulty"
+                    value="intermediate">Intermediate</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="difficulty"
+                    value="hard">Hard</input>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <p>Cost</p>
+            <ul>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="cost"
+                    value="cheap">Cheap</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="cost"
+                    value="average">Average</input>
+                </li>
+                <li>
+                    <input
+                    type="checkbox"
+                    name="cost"
+                    value="expensive">expensive</input>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="crop-list-wrapper">
+        <ul id="active-filters">
+            <li>autumn</li>
+            <li>balcony or patio</li>
+            <li>hard</li>
+        </ul>
+        <ul id="crop-list">
+            <li id="crop-1">
+                <h3 class="crop-name">
+                    <a href="{{ page.go_to_root }}crops/tomato.html">Tomato</a>
+                </h3>
+                <img src="http://upload.wikimedia.org/wikipedia/commons/8/88/Bright_red_tomato_and_cross_section02.jpg" alt="Tomates" />
+                <p>This is a common type of vege, but ...</p>
+            </li>
+            <li id="crop-2">
+                <h3 class="crop-name">Mushrooms</h3>
+                <img src="http://whatscookingamerica.net/Mushrooms.jpg" alt="Mushrooms" />
+                <p>Mushrooms are ...</p>
+            </li>
+            <li id="crop-3">
+                <h3 class="crop-name">Parsley</h3>
+                <img src="" alt="Parsley" />
+                <p>Parsley is a spicy. It isn't ...</p>
+            </li>
+        </ul>
+    </div>
+</div>

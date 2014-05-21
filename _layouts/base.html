@@ -3,31 +3,31 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="{{ page.go_to_root }}css/base.css">
 </head>
 <body>
     <div id="wrapper">
         <header>
-            <div id="logo">Gardens By Design</div>
+            <div id="logo"><a href="{{ page.go_to_root }}index.html">Gardens By Design</a></div>
             <div id="search">
                 <form action="search.html" method="POST">
                     <input type="text"></input>
                 </form>
             </div>
-            <div class="clear"></div>
         </header>
         <nav>
             <ul>
-                <li>Gardening Tutorial</li>
-                <li>Crops</li>
-                <li>Climates</li>
-                <li>Types of Space</li>
-                <li>Gardening Tools</li>
-                <div class="clear"></div>
+                <li><a href="{{ page.go_to_root }}gardening-tutorial.html">Gardening Tutorial</a></li>
+                <li><a href="{{ page.go_to_root }}crops.html">crops</a></li>
+                <li><a href="{{ page.go_to_root }}climates.html">Climates</a></li>
+                <li><a href="{{ page.go_to_root }}types-of-space.html">Types of Space</a></li>
+                <li><a href="{{ page.go_to_root }}gardening-tools.html">Gardening Tools</a></li>
             </ul>
         </nav>
         <div id="content">
+
 {{ content }}
+
         </div>
         <footer>
             Footer here.

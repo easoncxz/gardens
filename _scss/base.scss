@@ -1,11 +1,21 @@
+// -------------------------------------
+//
+// Site-wide
+//
+// -------------------------------------
+
+$full-width : 800px;
+$min-width : 480px;
+$padding : 10pt;
+
 * {
     margin: 0;
     padding: 0;
 }
 
-$full-width : 800px;
-$min-width : 480px;
-$padding : 10pt;
+.clear {
+    clear: both;
+}
 
 #wrapper {
     max-width: $full-width;
@@ -16,6 +26,8 @@ $padding : 10pt;
 
 header {
     padding: $padding;
+    overflow: auto;
+    width: 100%;
 }
 
 #logo {
@@ -28,14 +40,12 @@ header {
     float: right;
 }
 
-.clear {
-    clear: both;
-}
-
 nav {
     background-color: black;
     padding: $padding;
     ul {
+        overflow: auto;
+        width: 100%;
         list-style-type: none;
         li {
             color: white;
@@ -49,6 +59,9 @@ nav {
 
 #content {
     padding: 2em;
+    position: relative;
+    overflow: auto;
+    width: 100%;
 }
 
 footer {
@@ -63,21 +76,105 @@ footer {
 //
 // -------------------------------------
 
-#window-frame {
-    overflow: scroll;
-    width: $full-width;
+#index {
 
-    #window-slider {
-        width: 5 * $full-width;
+    #window-frame {
+        overflow: hidden;
+        width: $full-width;
 
-        .window-panel {
-            width: $full-width;
-            float: left;
+        #window-slider {
+            width: 5 * $full-width;
+
+            .window-panel {
+                width: $full-width;
+                float: left;
+            }
+        }
+    }
+
+    #get-started-prompt {
+        width: $min-width;
+        margin: 1em auto;
+    }
+}
+
+// -------------------------------------
+//
+// For the "crops" page:
+//
+// -------------------------------------
+
+
+#crops {
+    
+    $small-image-height : 80px;
+    $filters-width : 200px;
+    $active-filters-height : 22px;
+
+    #filter-conditions {
+        //position: absolute;
+        width: $filters-width;
+        float: left;
+        background: #fee;
+
+        ul {
+            margin-left: 2em;
+        }
+    }
+
+    #crop-list-wrapper {
+        margin-left: $filters-width + 20px;
+
+        #active-filters {
+            border: 1px dotted black;
+            
+            li {
+                float: left;
+                margin-right: 2em;
+            }
+        }
+
+        #crop-list {
+            margin-top: $active-filters-height;
+            background: #efe;
+
+            li {
+                overflow: auto;
+                width: 100%;
+                img {
+                    float: right;
+                    height: $small-image-height;
+                }
+            }
         }
     }
 }
 
-#get-started-prompt {
-    width: $min-width;
-    margin: 1em auto;
+// -------------------------------------
+//
+// For the specific crop page
+//
+// -------------------------------------
+
+$large-image-height : 100px;
+
+.crop {
+    border: 1px solid green;
+    img {
+        height: $large-image-height;
+        float: right;
+    }
+}
+
+// -------------------------------------
+//
+// For the "types of space" page
+//
+// -------------------------------------
+
+#types-of-space {
+    $small-image-height : 80px;
+    img {
+        width: $small-image-height;
+    }
 }
