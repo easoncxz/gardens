@@ -69,7 +69,7 @@ $padding: 20px;
         #search {
             position: absolute;
             top: 40%;
-            right: 1em;
+            right: $padding;
         }
     }
 
@@ -118,18 +118,41 @@ $padding: 20px;
 // -------------------------------------
 
 #index {
+    $slide-height : 300px;
 
     #window-frame {
-        overflow: hidden;
         width: $full-width;
+        height: $slide-height;
+        overflow: hidden;
 
         #window-slider {
             width: 5 * $full-width;
+            height: $slide-height;
+            transition: margin-left 1s ease-in-out;
 
             .window-panel {
                 width: $full-width;
+                height: $slide-height;
                 float: left;
+                text-align: center;
+                top: 50%;
             }
+        }
+
+        #window-slider.one {
+            margin-left: 0;
+        }
+        #window-slider.two {
+            margin-left: - 1 * $full-width;
+        }
+        #window-slider.three {
+            margin-left: - 2 * $full-width;
+        }
+        #window-slider.four {
+            margin-left: - 3 * $full-width;
+        }
+        #window-slider.five {
+            margin-left: - 4 * $full-width;
         }
     }
 

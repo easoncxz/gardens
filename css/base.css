@@ -27,7 +27,7 @@
     #wrapper header #search {
       position: absolute;
       top: 40%;
-      right: 1em; }
+      right: 20px; }
   #wrapper nav {
     background-color: black; }
     #wrapper nav ul {
@@ -51,13 +51,29 @@
     text-align: center; }
 
 #index #window-frame {
-  overflow: hidden;
-  width: 800px; }
+  width: 800px;
+  height: 300px;
+  overflow: hidden; }
   #index #window-frame #window-slider {
-    width: 4000px; }
+    width: 4000px;
+    height: 300px;
+    transition: margin-left 1s ease-in-out; }
     #index #window-frame #window-slider .window-panel {
       width: 800px;
-      float: left; }
+      height: 300px;
+      float: left;
+      text-align: center;
+      top: 50%; }
+  #index #window-frame #window-slider.one {
+    margin-left: 0; }
+  #index #window-frame #window-slider.two {
+    margin-left: -800px; }
+  #index #window-frame #window-slider.three {
+    margin-left: -1600px; }
+  #index #window-frame #window-slider.four {
+    margin-left: -2400px; }
+  #index #window-frame #window-slider.five {
+    margin-left: -3200px; }
 #index #get-started-prompt {
   width: 600px;
   margin: 1em auto; }
