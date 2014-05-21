@@ -1,6 +1,6 @@
 ---
 layout: base
-go_to_root: ../
+go_to_root: ./
 ---
 # Gardening Tutorial
 
@@ -12,4 +12,4 @@ go_to_root: ../
 
 ## Re-planting
 
-1. Timing 
+1. Timing
