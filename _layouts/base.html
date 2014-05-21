@@ -8,20 +8,24 @@
 <body>
     <div id="wrapper">
         <header>
-            <div id="logo"><a href="{{ page.go_to_root }}index.html">Gardens By Design</a></div>
+            <div id="logo">
+                <a href="{{ page.go_to_root }}index.html">
+                    Gardens By Design
+                </a>
+            </div>
             <div id="search">
                 <form action="search.html" method="POST">
-                    <input type="text"></input>
+                    <input type="text" hint="Search..."></input>
                 </form>
             </div>
         </header>
         <nav>
             <ul>
-                <li><a href="{{ page.go_to_root }}gardening-tutorial.html">Gardening Tutorial</a></li>
-                <li><a href="{{ page.go_to_root }}crops.html">crops</a></li>
-                <li><a href="{{ page.go_to_root }}climates.html">Climates</a></li>
-                <li><a href="{{ page.go_to_root }}types-of-space.html">Types of Space</a></li>
-                <li><a href="{{ page.go_to_root }}gardening-tools.html">Gardening Tools</a></li>
+                <a href="{{ page.go_to_root }}gardening-tutorial.html"><li>Gardening Tutorial</li></a>
+                <a href="{{ page.go_to_root }}crops.html"><li>Crops</li></a>
+                <a href="{{ page.go_to_root }}climates.html"><li>Climates</li></a>
+                <a href="{{ page.go_to_root }}types-of-space.html"><li>Types of Space</li></a>
+                <a href="{{ page.go_to_root }}gardening-tools.html"><li>Gardening Tools</li></a>
             </ul>
         </nav>
         <div id="content">
