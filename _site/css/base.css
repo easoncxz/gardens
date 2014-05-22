@@ -53,8 +53,9 @@
 #index #window-frame {
   width: 500px;
   height: 360px;
-  overflow: auto;
-  margin: 0 auto; }
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative; }
   #index #window-frame #window-slider {
     width: 2500px;
     height: 360px;
@@ -75,8 +76,9 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        background-color: rgba(255, 255, 255, 0.8);
         padding: 10px;
+        max-width: 60%;
+        background-color: rgba(255, 255, 255, 0.8);
         color: #000; }
   #index #window-frame #window-slider.one {
     margin-left: 0; }

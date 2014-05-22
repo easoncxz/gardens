@@ -126,8 +126,9 @@ $padding: 20px;
     #window-frame {
         width: $image-width;
         height: $slide-height + $slide-padding * 2;
-        overflow: auto;
+        overflow: hidden;
         margin: 0 auto;
+        position: relative;
 
         #window-slider {
             width: 5 * $image-width;
@@ -155,8 +156,9 @@ $padding: 20px;
                     position: absolute;
                     left: 0;
                     bottom: 0;
-                    background-color: rgba(255, 255, 255, 0.8);
                     padding: 10px;
+                    max-width: 60%;
+                    background-color: rgba(255, 255, 255, 0.8);
                     color: #000;
                 }
             }
