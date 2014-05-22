@@ -99,6 +99,7 @@ $padding: 20px;
     }
 
     #content {
+        // fancy trick that removes the demand for a clear:both div.
         position: relative;
         overflow: auto;
         width: 100%;
@@ -118,29 +119,45 @@ $padding: 20px;
 // -------------------------------------
 
 #index {
+    $image-width : 500px;
     $slide-height : 300px;
+    $slide-padding : 30px;
 
     #window-frame {
-        width: $full-width;
-        height: $slide-height;
-        overflow: hidden;
+        width: $image-width;
+        height: $slide-height + $slide-padding * 2;
+        overflow: auto;
+        margin: 0 auto;
 
         #window-slider {
-            width: 5 * $full-width;
-            height: $slide-height;
+            width: 5 * $image-width;
+            height: $slide-height + $slide-padding * 2;
             transition: margin-left 1s ease-in-out;
-            position: relative;
-            border: 1px dashed grey;
+            padding: $slide-padding 0;
 
             .window-panel {
-                width: $full-width;
+                width: $image-width;
                 height: $slide-height;
                 float: left;
+                position: relative;
 
-                img {
+                .image {
+                    width: $image-width;
                     height: $slide-height;
+
+                    img {
+                        width: $image-width;
+                        height: $slide-height;
+                    }
+                }
+                
+                .panel-label {
                     position: absolute;
-                    margin: 0 auto;
+                    left: 0;
+                    bottom: 0;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    padding: 10px;
+                    color: #000;
                 }
             }
         }
