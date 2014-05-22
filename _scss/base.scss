@@ -129,13 +129,19 @@ $padding: 20px;
             width: 5 * $full-width;
             height: $slide-height;
             transition: margin-left 1s ease-in-out;
+            position: relative;
+            border: 1px dashed grey;
 
             .window-panel {
                 width: $full-width;
                 height: $slide-height;
                 float: left;
-                text-align: center;
-                top: 50%;
+
+                img {
+                    height: $slide-height;
+                    position: absolute;
+                    margin: 0 auto;
+                }
             }
         }
 
@@ -154,6 +160,7 @@ $padding: 20px;
         #window-slider.five {
             margin-left: - 4 * $full-width;
         }
+
     }
 
     #get-started-prompt {
