@@ -80,7 +80,11 @@ header:hover #logo {
 
 nav {
     background-color: $light-green-5;
-    $text-color: black;
+    $hover-background-color: $light-green-1;
+    $text-color: #444;
+    $text-color-hover: black;
+    //background-color: $magenta-5;
+    //$hover-background-color: $magenta-1;
 
     .wrapper {
 
@@ -100,22 +104,28 @@ nav {
                 }
             }
 
-            a:hover li {
-                background-color: $light-green-1;
+            a:hover {
+                color: $text-color-hover;
+
+                li {
+                    background-color: $hover-background-color;
+                }
             }
         }
     }
 }
 
-//#content {
-//    // fancy trick that removes the demand for a clear:both div.
-//    position: relative;
-//    overflow: auto;
-//    width: 100%;
-//}
+#content {
+    //// fancy trick that removes the demand for a clear:both div.
+    //position: relative;
+    //overflow: auto;
+    //width: 100%;
+    background-color: #f5f5f5;
+}
 
 footer {
-    width: 100%;
+    padding: 40px 0;
+    background-color: #ddd;
     text-align: center;
 }  
 
@@ -191,7 +201,7 @@ footer {
 
     #get-started-prompt {
         width: 600px;
-        margin: 1em auto;
+        margin: 0 auto;
     }
 }
 

@@ -34,17 +34,23 @@ nav {
     width: 100%;
     list-style-type: none; }
     nav .wrapper ul a {
-      color: black;
+      color: #444444;
       text-decoration: none; }
       nav .wrapper ul a li {
         float: left;
         padding: 10px 20px;
         transition: background-color 0.2s ease-in-out; }
-    nav .wrapper ul a:hover li {
-      background-color: #98ed00; }
+    nav .wrapper ul a:hover {
+      color: black; }
+      nav .wrapper ul a:hover li {
+        background-color: #98ed00; }
+
+#content {
+  background-color: #f5f5f5; }
 
 footer {
-  width: 100%;
+  padding: 40px 0;
+  background-color: #ddd;
   text-align: center; }
 
 #index #window-frame {
@@ -89,7 +95,7 @@ footer {
     margin-left: -3200px; }
 #index #get-started-prompt {
   width: 600px;
-  margin: 1em auto; }
+  margin: 0 auto; }
 
 #crops #filter-conditions {
   width: 200px;
