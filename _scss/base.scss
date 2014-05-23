@@ -31,6 +31,19 @@ $magenta-5 : #E768AB;
 $full-width : 800px;
 $padding: 20px;
 
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+//@font-face {
+//    font-family: 'Varela Round';
+//    font-style: normal;
+//    font-weight: 400;
+//    src: 
+//        local('Varela Round'),
+//        local('VarelaRound-Regular'),
+//        url(http://themes.googleusercontent.com/static/fonts/varelaround/v4/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff)
+//        format('woff');
+//}
+
 * {
     margin: 0;
     padding: 0;
@@ -44,25 +57,28 @@ $padding: 20px;
 
     max-width: $full-width;
     margin: 0 auto;
-    background-color: #eee;
 
     header {
         overflow: auto;
         width: 100%;
         position: relative;
-        background: $dark-green-3;
+        margin-top: 40px;
+        //background-color: $light-green-5;
         
         #logo {
-            font-size: 30pt;
-            font-family: serif;
             padding: $padding;
             float: left;
+            font-size: 35pt;
+            font-family: "Montserrat", serif;
+
             a {
                 text-decoration: none;
-                color: #fff;
+                color: $dark-green-3;
             }
+
             a:hover {
                 text-decoration: underline;
+                color: $dark-green-3;
             }
         }
 
