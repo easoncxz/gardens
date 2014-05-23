@@ -16,11 +16,11 @@ $dark-green-3 : #008110;
 $dark-green-4 : #39E24D;
 $dark-green-5 : #66E275;
 
-$yello-1 : #F7FE00;
-$yello-2 : #BBBE30;
-$yello-3 : #A1A500;
-$yello-4 : #F9FE40;
-$yello-5 : #FBFE72;
+$yellow-1 : #F7FE00;
+$yellow-2 : #BBBE30;
+$yellow-3 : #A1A500;
+$yellow-4 : #F9FE40;
+$yellow-5 : #FBFE72;
 
 $magenta-1 : #D0006E;
 $magenta-2 : #9C2765;
@@ -29,20 +29,11 @@ $magenta-4 : #E73A95;
 $magenta-5 : #E768AB;
 
 $full-width : 800px;
-$padding: 20px;
+$padding : 20px;
+$hover-transition : 0.2s;
 
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-//@font-face {
-//    font-family: 'Varela Round';
-//    font-style: normal;
-//    font-weight: 400;
-//    src: 
-//        local('Varela Round'),
-//        local('VarelaRound-Regular'),
-//        url(http://themes.googleusercontent.com/static/fonts/varelaround/v4/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff)
-//        format('woff');
-//}
 
 * {
     margin: 0;
@@ -53,80 +44,80 @@ $padding: 20px;
     clear: both;
 }
 
-#wrapper {
-
+.wrapper {
     max-width: $full-width;
     margin: 0 auto;
+}
 
-    header {
-        overflow: auto;
-        width: 100%;
-        position: relative;
-        margin-top: 40px;
-        //background-color: $light-green-5;
-        
+header {
+    background-color: $dark-green-2;
+    $header-color: #fefefe;
+
+    .wrapper {
+        padding-top: 60px;
+    
         #logo {
             padding: $padding;
-            float: left;
-            font-size: 35pt;
+            font-size: 38pt;
             font-family: "Montserrat", serif;
 
             a {
+                padding: 0.1em 0;
                 text-decoration: none;
-                color: $dark-green-3;
+                color: $header-color;
+                transition: border $hover-transition ease-in-out; // property duration easing delay
             }
 
             a:hover {
-                text-decoration: underline;
-                color: $dark-green-3;
+                border-bottom: 4px solid $header-color;
             }
         }
-
-        #search {
-            position: absolute;
-            top: 40%;
-            right: $padding;
-        }
     }
+}
 
-    nav {
-        background-color: black;
+header:hover #logo {
+}
+
+nav {
+    background-color: $light-green-5;
+    $text-color: black;
+
+    .wrapper {
 
         ul {
             overflow: auto;
+            width: 100%;
             list-style-type: none;
 
             a {
-                color: white;
+                color: $text-color;
                 text-decoration: none;
-                border-bottom: 2px solid #ddd;
 
                 li {
                     float: left;
                     padding: ($padding / 2) ($padding);
-                    //box-shadow: inset 0px -2px 5px #fff;
+                    transition: background-color $hover-transition ease-in-out;
                 }
             }
 
             a:hover li {
-                text-decoration: underline;
+                background-color: $light-green-1;
             }
         }
     }
+}
 
-    #content {
-        // fancy trick that removes the demand for a clear:both div.
-        position: relative;
-        overflow: auto;
-        width: 100%;
-    }
+//#content {
+//    // fancy trick that removes the demand for a clear:both div.
+//    position: relative;
+//    overflow: auto;
+//    width: 100%;
+//}
 
-    footer {
-        width: 100%;
-        text-align: center;
-    }  
-} 
-
+footer {
+    width: 100%;
+    text-align: center;
+}  
 
 // -------------------------------------
 //

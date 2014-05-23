@@ -7,50 +7,45 @@
 .clear {
   clear: both; }
 
-#wrapper {
+.wrapper {
   max-width: 800px;
   margin: 0 auto; }
-  #wrapper header {
-    overflow: auto;
-    width: 100%;
-    position: relative;
-    margin-top: 40px; }
-    #wrapper header #logo {
+
+header {
+  background-color: #259433; }
+  header .wrapper {
+    padding-top: 60px; }
+    header .wrapper #logo {
       padding: 20px;
-      float: left;
-      font-size: 35pt;
+      font-size: 38pt;
       font-family: "Montserrat", serif; }
-      #wrapper header #logo a {
+      header .wrapper #logo a {
+        padding: 0.1em 0;
         text-decoration: none;
-        color: #008110; }
-      #wrapper header #logo a:hover {
-        text-decoration: underline;
-        color: #008110; }
-    #wrapper header #search {
-      position: absolute;
-      top: 40%;
-      right: 20px; }
-  #wrapper nav {
-    background-color: black; }
-    #wrapper nav ul {
-      overflow: auto;
-      list-style-type: none; }
-      #wrapper nav ul a {
-        color: white;
-        text-decoration: none;
-        border-bottom: 2px solid #ddd; }
-        #wrapper nav ul a li {
-          float: left;
-          padding: 10px 20px; }
-      #wrapper nav ul a:hover li {
-        text-decoration: underline; }
-  #wrapper #content {
-    position: relative;
+        color: #fefefe;
+        transition: border 0.2s ease-in-out; }
+      header .wrapper #logo a:hover {
+        border-bottom: 4px solid #fefefe; }
+
+nav {
+  background-color: #c6f66f; }
+  nav .wrapper ul {
     overflow: auto;
-    width: 100%; }
-  #wrapper footer {
     width: 100%;
-    text-align: center; }
+    list-style-type: none; }
+    nav .wrapper ul a {
+      color: black;
+      text-decoration: none; }
+      nav .wrapper ul a li {
+        float: left;
+        padding: 10px 20px;
+        transition: background-color 0.2s ease-in-out; }
+    nav .wrapper ul a:hover li {
+      background-color: #98ed00; }
+
+footer {
+  width: 100%;
+  text-align: center; }
 
 #index #window-frame {
   width: 500px;
