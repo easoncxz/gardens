@@ -28,12 +28,22 @@ $magenta-3 : #870047;
 $magenta-4 : #E73A95;
 $magenta-5 : #E768AB;
 
-$full-width : 800px;
-$padding : 20px;
+$full-width : 900px;
+$default-padding : 20px;
 $hover-transition : 0.2s;
 
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+//@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+//@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@font-face {
+  font-family: 'AutourOne';
+  src: url('../fonts/AutourOne-Regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/AutourOne-Regular.otf') format('opentype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+@font-face {
+  font-family: 'Comic Neue';
+  src: url('../fonts/ComicNeue-Regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/ComicNeue-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 * {
     margin: 0;
@@ -57,9 +67,9 @@ header {
         padding-top: 60px;
     
         #logo {
-            padding: $padding;
+            padding: $default-padding;
             font-size: 38pt;
-            font-family: "Montserrat", serif;
+            font-family: "Comic Neue", serif;
 
             a {
                 padding: 0.1em 0;
@@ -80,11 +90,11 @@ header:hover #logo {
 
 nav {
     background-color: $light-green-5;
-    $hover-background-color: $light-green-1;
+    $hover-background-color: $dark-green-4;
     $text-color: #444;
     $text-color-hover: black;
-    //background-color: $magenta-5;
-    //$hover-background-color: $magenta-1;
+    font-family: helvetica, sans-serif;
+    font-size: 14pt;
 
     .wrapper {
 
@@ -99,7 +109,7 @@ nav {
 
                 li {
                     float: left;
-                    padding: ($padding / 2) ($padding);
+                    padding: ($default-padding / 2) ($default-padding);
                     transition: background-color $hover-transition ease-in-out;
                 }
             }
@@ -113,14 +123,6 @@ nav {
             }
         }
     }
-}
-
-#content {
-    //// fancy trick that removes the demand for a clear:both div.
-    //position: relative;
-    //overflow: auto;
-    //width: 100%;
-    background-color: #f5f5f5;
 }
 
 footer {
@@ -142,16 +144,15 @@ footer {
 
     #window-frame {
         width: $image-width;
-        height: $slide-height + $slide-padding * 2;
-        overflow: hidden;
-        margin: 0 auto;
+        height: $slide-height;// + $slide-padding * 2;
+        overflow: scroll;
+        margin: $slide-padding auto;
         position: relative;
 
         #window-slider {
             width: 5 * $image-width;
-            height: $slide-height + $slide-padding * 2;
+            height: $slide-height;// + $slide-padding * 2;
             transition: margin-left 1s ease-in-out;
-            padding: $slide-padding 0;
 
             .window-panel {
                 width: $image-width;
@@ -185,23 +186,59 @@ footer {
             margin-left: 0;
         }
         #window-slider.two {
-            margin-left: - 1 * $full-width;
+            margin-left: - 1 * $image-width;
         }
         #window-slider.three {
-            margin-left: - 2 * $full-width;
+            margin-left: - 2 * $image-width;
         }
         #window-slider.four {
-            margin-left: - 3 * $full-width;
+            margin-left: - 3 * $image-width;
         }
         #window-slider.five {
-            margin-left: - 4 * $full-width;
+            margin-left: - 4 * $image-width;
         }
 
     }
 
     #get-started-prompt {
-        width: 600px;
-        margin: 0 auto;
+        padding: 3em 0 4em;
+        text-align: center;
+
+        p.question {
+            line-height: 140%;
+            font-family: "Comic Neue";
+            font-size: 24pt;
+        }
+
+        a {
+            display: block;
+            max-width: 200px;
+            margin: 2em auto 0;
+            padding: 1em;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16pt;
+            color: white;
+            text-shadow: 1px 1px 1px $magenta-3;
+            border-radius: 5px;
+            border-style: solid;
+
+            background-color: $magenta-1;
+            border-color: $magenta-3;
+            border-width: 0 4px 4px 0;
+        }
+
+        a:hover {
+            background-color: $magenta-4;
+            border-color: $magenta-2;
+        }
+
+        a:active {
+            background-color   : $magenta-4;
+            border-bottom-color: $magenta-2;
+            border-right-color : $magenta-2;
+            border-width: 4px 0 0 4px;
+        }
     }
 }
 

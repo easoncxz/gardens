@@ -1,5 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Varela+Round);
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@charset "UTF-8";
+@font-face {
+  font-family: 'AutourOne';
+  src: url("../fonts/AutourOne-Regular.woff") format("woff"), url("../fonts/AutourOne-Regular.otf") format("opentype");
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */ }
+@font-face {
+  font-family: 'Comic Neue';
+  src: url("../fonts/ComicNeue-Regular.woff") format("woff"), url("../fonts/ComicNeue-Regular.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */ }
 * {
   margin: 0;
   padding: 0; }
@@ -8,7 +15,7 @@
   clear: both; }
 
 .wrapper {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto; }
 
 header {
@@ -18,7 +25,7 @@ header {
     header .wrapper #logo {
       padding: 20px;
       font-size: 38pt;
-      font-family: "Montserrat", serif; }
+      font-family: "Comic Neue", serif; }
       header .wrapper #logo a {
         padding: 0.1em 0;
         text-decoration: none;
@@ -28,7 +35,9 @@ header {
         border-bottom: 4px solid #fefefe; }
 
 nav {
-  background-color: #c6f66f; }
+  background-color: #c6f66f;
+  font-family: helvetica, sans-serif;
+  font-size: 14pt; }
   nav .wrapper ul {
     overflow: auto;
     width: 100%;
@@ -43,10 +52,7 @@ nav {
     nav .wrapper ul a:hover {
       color: black; }
       nav .wrapper ul a:hover li {
-        background-color: #98ed00; }
-
-#content {
-  background-color: #f5f5f5; }
+        background-color: #39e24d; }
 
 footer {
   padding: 40px 0;
@@ -55,15 +61,14 @@ footer {
 
 #index #window-frame {
   width: 500px;
-  height: 360px;
-  overflow: hidden;
-  margin: 0 auto;
+  height: 300px;
+  overflow: scroll;
+  margin: 30px auto;
   position: relative; }
   #index #window-frame #window-slider {
     width: 2500px;
-    height: 360px;
-    transition: margin-left 1s ease-in-out;
-    padding: 30px 0; }
+    height: 300px;
+    transition: margin-left 1s ease-in-out; }
     #index #window-frame #window-slider .window-panel {
       width: 500px;
       height: 300px;
@@ -86,16 +91,43 @@ footer {
   #index #window-frame #window-slider.one {
     margin-left: 0; }
   #index #window-frame #window-slider.two {
-    margin-left: -800px; }
+    margin-left: -500px; }
   #index #window-frame #window-slider.three {
-    margin-left: -1600px; }
+    margin-left: -1000px; }
   #index #window-frame #window-slider.four {
-    margin-left: -2400px; }
+    margin-left: -1500px; }
   #index #window-frame #window-slider.five {
-    margin-left: -3200px; }
+    margin-left: -2000px; }
 #index #get-started-prompt {
-  width: 600px;
-  margin: 0 auto; }
+  padding: 3em 0 4em;
+  text-align: center; }
+  #index #get-started-prompt p.question {
+    line-height: 140%;
+    font-family: "Comic Neue";
+    font-size: 24pt; }
+  #index #get-started-prompt a {
+    display: block;
+    max-width: 200px;
+    margin: 2em auto 0;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16pt;
+    color: white;
+    text-shadow: 1px 1px 1px #870047;
+    border-radius: 5px;
+    border-style: solid;
+    background-color: #d0006e;
+    border-color: #870047;
+    border-width: 0 4px 4px 0; }
+  #index #get-started-prompt a:hover {
+    background-color: #e73a95;
+    border-color: #9c2765; }
+  #index #get-started-prompt a:active {
+    background-color: #e73a95;
+    border-bottom-color: #9c2765;
+    border-right-color: #9c2765;
+    border-width: 4px 0 0 4px; }
 
 #crops #filter-conditions {
   width: 200px;
