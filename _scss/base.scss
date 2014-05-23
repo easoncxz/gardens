@@ -145,7 +145,7 @@ footer {
     #window-frame {
         width: $image-width;
         height: $slide-height;// + $slide-padding * 2;
-        overflow: scroll;
+        overflow: hidden;
         margin: $slide-padding auto;
         position: relative;
 
@@ -182,26 +182,44 @@ footer {
             }
         }
 
-        #window-slider.one {
-            margin-left: 0;
-        }
-        #window-slider.two {
-            margin-left: - 1 * $image-width;
-        }
-        #window-slider.three {
-            margin-left: - 2 * $image-width;
-        }
-        #window-slider.four {
-            margin-left: - 3 * $image-width;
-        }
-        #window-slider.five {
-            margin-left: - 4 * $image-width;
-        }
+        #window-dots {
+            $dr : 5px;  // dot radius
+            $dsolid : white;
 
+            position: absolute;
+            right: $dr;
+            bottom: $dr;
+            padding: $dr;
+            background-color: rgba(50, 50, 50, 0.6);
+            border-radius: 10px;
+            //border-width: 2px;
+            //border-style: solid;
+            //border-color: white;
+            box-shadow: 1px 1px 1px 1px #ddd;
+
+            .dot {
+                width: 2 * $dr;
+                height: 2 * $dr;
+                margin: $dr / 3;
+                float: left;
+                border-width: 2px;
+                border-style: solid;
+                border-color: $dsolid;
+                border-radius: 10px;
+            }
+
+            .dot.on {
+                background-color: $dsolid;
+            }
+
+            .dot.off {
+                background-color: none;
+            }
+        }
     }
 
     #get-started-prompt {
-        padding: 3em 0 4em;
+        margin: 0 0 4em;
         text-align: center;
 
         p.question {
@@ -213,7 +231,7 @@ footer {
         a {
             display: block;
             max-width: 200px;
-            margin: 2em auto 0;
+            margin: 2em auto 2em;
             padding: 1em;
             text-decoration: none;
             font-weight: bold;

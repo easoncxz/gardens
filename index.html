@@ -5,7 +5,7 @@ title: Gardens By Design - Home
 <div id="index">
     <div id="window-frame">
         <div id="window-slider">
-            <div class="window-panel one">
+            <div class="window-panel">
                 <div class="panel-label">
                     <h5>Gardening Tutorial</h5>
                     <p>When to water? When to harvest? Hands-on gardening techniques for you.</p>
@@ -14,7 +14,7 @@ title: Gardens By Design - Home
                     <img src="{{ page.go_to_root }}images/gardening-tutorial-500-300.jpg" alt="A woman learning to garden, inside a greenhouse." />
                 </div>
             </div>
-            <div class="window-panel two">
+            <div class="window-panel">
                 <div class="panel-label">
                     <h5>Crops</h5>
                     <p>What do people plant? Different plants require different attention.</p>
@@ -23,7 +23,7 @@ title: Gardens By Design - Home
                     <img src="{{ page.go_to_root }}images/crops-500-300.jpg" alt="Mushrooms grown in a laundry basket" />
                 </div>
             </div>
-            <div class="window-panel three">
+            <div class="window-panel">
                 <div class="panel-label">
                     <h5>Climates</h5>
                     <p>When's the time to grow that crop? Would autumn do?</p>
@@ -33,7 +33,7 @@ title: Gardens By Design - Home
                     <img src="{{ page.go_to_root }}images/climates-500-300.jpg" alt="A sunset over Auckland city" />
                 </div>
             </div>
-            <div class="window-panel four">
+            <div class="window-panel">
                 <div class="panel-label">
                     <h5>Types of space</h5>
                     <p>Small spaces can make gardening tricky! Plan your space wisely.</p> 
@@ -42,7 +42,7 @@ title: Gardens By Design - Home
                     <img src="{{ page.go_to_root }}images/types-of-space-500-300.jpg" alt="Balcony gardens" />
                 </div>
             </div>
-            <div class="window-panel five">
+            <div class="window-panel">
                 <div class="panel-label">
                     <h5>Gardening tools</h5>
                     <p>Pots, shovels, water cans - maybe fertilizers too? Here's all about the stuff you'll need.</p>
@@ -52,9 +52,67 @@ title: Gardens By Design - Home
                 </div>
             </div>
         </div>
+        <div id="window-dots">
+            <div class="dot  on" id="dot0"></div>
+            <div class="dot" id="dot1"></div>
+            <div class="dot" id="dot2"></div>
+            <div class="dot" id="dot3"></div>
+            <div class="dot" id="dot4"></div>
+        </div>
     </div>
     <div id="get-started-prompt">
         <p class="question">Are you totally new to gardening?<br>We're here to help!</p>
         <a href="getting-started.html">Get started now</a>
+        <a id="next">Next</a>
+        <a id="prev">Previous</a>
     </div>
+    <script>
+    var imageWidth = 500;
+    var divSlider = $('#window-slider');
+    function goToSlide(pos) {
+        if (pos <= 4 && pos >= 0) {
+            divSlider.css('margin-left', (- pos * imageWidth) + 'px');
+        }
+    }
+    function highlightDot(dot) {
+        $('#window-dots .dot').removeClass('on');
+        dot.addClass('on');
+    }
+    var dot0 = $('#dot0');
+    var dot1 = $('#dot1');
+    var dot2 = $('#dot2');
+    var dot3 = $('#dot3');
+    var dot4 = $('#dot4');
+    dot0.on('click', function() { goToSlide(0); highlightDot(dot0); });
+    dot1.on('click', function() { goToSlide(1); highlightDot(dot1); });
+    dot2.on('click', function() { goToSlide(2); highlightDot(dot2); });
+    dot3.on('click', function() { goToSlide(3); highlightDot(dot3); });
+    dot4.on('click', function() { goToSlide(4); highlightDot(dot4); });
+
+    //var nextSlide = function() {
+    //    if (parseInt(divSlider.css('margin-left')) <= (-4 * imageWidth)) {
+    //        // do nothing
+    //    } else {
+    //        divSlider.css('margin-left', (parseInt(divSlider.css('margin-left')) - imageWidth) + 'px');
+    //    }
+    //};
+    //var prevSlide = function() {
+    //    if (parseInt(divSlider.css('margin-left')) >= 0) {
+    //        // do nothing
+    //    } else {
+    //        divSlider.css('margin-left', (parseInt(divSlider.css('margin-left')) + imageWidth) + 'px');
+    //    }
+    //};
+
+    //var btnNext = $('#next');
+    //var btnPrev = $('#prev');
+    ////btnNext.on('click', nextSlide);
+    //btnNext.on('click', function(){
+    //    goToSlide(2);
+    //});
+    ////btnPrev.on('click', prevSlide);
+    //btnPrev.on('click', function(){
+    //    goToSlide(0);
+    //});
+    </script>
 </div>
