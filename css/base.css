@@ -1,9 +1,5 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'AutourOne';
-  src: url("../fonts/AutourOne-Regular.woff") format("woff"), url("../fonts/AutourOne-Regular.otf") format("opentype");
-  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */ }
-@font-face {
   font-family: 'Comic Neue';
   src: url("../fonts/ComicNeue-Regular.woff") format("woff"), url("../fonts/ComicNeue-Regular.ttf") format("truetype");
   /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */ }
@@ -173,8 +169,36 @@ footer {
     height: 100px;
     float: right; }
 
-#types-of-space img {
-  width: 80px; }
+#gardening-tutorial, #types-of-space, #gardening-tools {
+  padding: 20px; }
+  #gardening-tutorial h1, #types-of-space h1, #gardening-tools h1 {
+    margin: 20pt 0;
+    font-weight: lighter;
+    font-size: 26pt;
+    text-align: center; }
+  #gardening-tutorial h2, #types-of-space h2, #gardening-tools h2 {
+    font-weight: lighter;
+    font-size: 20pt;
+    margin: 20pt 0; }
+  #gardening-tutorial p, #types-of-space p, #gardening-tools p {
+    margin: 1.5em 40px; }
+
+#climates {
+  padding: 20px; }
+  #climates h1 {
+    margin: 20pt 0;
+    font-weight: lighter;
+    font-size: 26pt;
+    text-align: center; }
+  #climates h2 {
+    font-weight: lighter;
+    font-size: 20pt;
+    margin: 20pt 0; }
+  #climates p {
+    margin: 1.5em 40px; }
 
 #getting-started {
+  border: 2px dotted grey; }
+
+#got-started {
   border: 2px dotted grey; }

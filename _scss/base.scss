@@ -32,13 +32,6 @@ $full-width : 900px;
 $default-padding : 20px;
 $hover-transition : 0.2s;
 
-//@import url(http://fonts.googleapis.com/css?family=Varela+Round);
-//@import url(http://fonts.googleapis.com/css?family=Montserrat);
-@font-face {
-  font-family: 'AutourOne';
-  src: url('../fonts/AutourOne-Regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../fonts/AutourOne-Regular.otf') format('opentype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-}
 @font-face {
   font-family: 'Comic Neue';
   src: url('../fonts/ComicNeue-Regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -83,9 +76,6 @@ header {
             }
         }
     }
-}
-
-header:hover #logo {
 }
 
 nav {
@@ -136,7 +126,6 @@ footer {
 // For the "index" page:
 //
 // -------------------------------------
-
 #index {
     $image-width : 500px;
     $slide-height : 300px;
@@ -278,11 +267,9 @@ footer {
 
 // -------------------------------------
 //
-// For the "crops" page:
+// For the list-of-crops page:
 //
 // -------------------------------------
-
-
 #crops {
     
     $small-image-height : 80px;
@@ -330,10 +317,9 @@ footer {
 
 // -------------------------------------
 //
-// For the specific crop page
+// For the specific-crop pages
 //
 // -------------------------------------
-
 .crop {
     $large-image-height : 100px;
 
@@ -346,15 +332,55 @@ footer {
 
 // -------------------------------------
 //
-// For the "types of space" page
+// The common parts of:
+//   - gardening tutorial
+//   - types of space
+//   - gardening tools
+//   - climates page
 //
 // -------------------------------------
+@mixin listicle() {
+    padding: 20px;
 
-#types-of-space {
-    $small-image-height : 80px;
-    img {
-        width: $small-image-height;
+    h1 {
+        margin: 20pt 0;
+        font-weight: lighter;
+        font-size: 26pt;
+        text-align: center;
     }
+
+    h2 {
+        font-weight: lighter;
+        font-size: 20pt;
+        margin: 20pt 0;
+    }
+
+    p {
+        //padding-left: 40px;
+        margin: 1.5em 40px;
+    }
+}
+
+// -------------------------------------
+//
+//   - gardening tutorial
+//   - types of space
+//   - gardening tools
+//
+// -------------------------------------
+#gardening-tutorial, #types-of-space, #gardening-tools {
+    @include listicle();
+    $small-image-height : 80px;
+}
+
+// -------------------------------------
+//
+// For the "climates" page
+//
+// -------------------------------------
+#climates {
+    @include listicle();
+
 }
 
 // -------------------------------------
@@ -362,7 +388,15 @@ footer {
 // For the "getting started" page
 //
 // -------------------------------------
-
 #getting-started {
+    border: 2px dotted grey;
+}
+
+// -------------------------------------
+//
+// For the "got started" page
+//
+// -------------------------------------
+#got-started {
     border: 2px dotted grey;
 }
