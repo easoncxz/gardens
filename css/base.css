@@ -64,7 +64,8 @@ footer {
   height: 300px;
   overflow: hidden;
   margin: 30px auto;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0 4px 1px #aaa; }
   #index #window-frame #window-slider {
     width: 2500px;
     height: 300px;
@@ -88,14 +89,17 @@ footer {
         max-width: 60%;
         background-color: rgba(255, 255, 255, 0.8);
         color: #000; }
+        #index #window-frame #window-slider .window-panel .panel-label h5 {
+          font-size: 16px; }
+        #index #window-frame #window-slider .window-panel .panel-label p {
+          font-size: 16px; }
   #index #window-frame #window-dots {
     position: absolute;
     right: 5px;
     bottom: 5px;
     padding: 5px;
     background-color: rgba(50, 50, 50, 0.6);
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px #ddd; }
+    border-radius: 10px; }
     #index #window-frame #window-dots .dot {
       width: 10px;
       height: 10px;
