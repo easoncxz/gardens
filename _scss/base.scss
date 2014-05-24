@@ -1,9 +1,3 @@
-// -------------------------------------
-//
-// Site-wide styles - used in _layout/base.html
-//
-// -------------------------------------
-
 $light-green-1 : #98ED00;
 $light-green-2 : #82B22C;
 $light-green-3 : #639A00;
@@ -31,6 +25,7 @@ $magenta-5 : #E768AB;
 $full-width : 900px;
 $default-padding : 20px;
 $hover-transition : 0.2s;
+$content-padding: 20px;
 
 @font-face {
   font-family: 'Comic Neue';
@@ -51,6 +46,59 @@ $hover-transition : 0.2s;
     max-width: $full-width;
     margin: 0 auto;
 }
+
+@mixin listicle() {
+    padding: $content-padding;
+
+    h2 {
+        font-weight: lighter;
+        font-size: 20pt;
+        margin: 20pt 0;
+    }
+
+    p {
+        margin: 1.5em 40px;
+    }
+}
+
+
+a.button {
+    display: block;
+    max-width: 200px;
+    margin: 2em auto 2em;
+    padding: 1em;
+    font-size: 16pt;
+    text-decoration: none;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px $magenta-3;
+    border-radius: 5px;
+    border-style: solid;
+
+    background-color: $magenta-1;
+    border-color: $magenta-3;
+    border-width: 0 4px 4px 0;
+}
+
+a.button:hover {
+    background-color: $magenta-4;
+    border-color: $magenta-2;
+}
+
+a.button:active {
+    background-color   : $magenta-4;
+    border-bottom-color: $magenta-2;
+    border-right-color : $magenta-2;
+    border-width: 4px 0 0 4px;
+}
+
+// -------------------------------------
+//
+// Site-wide styles - used in _layout/base.html
+//
+// -------------------------------------
 
 header {
     background-color: $dark-green-2;
@@ -231,38 +279,6 @@ footer {
     }
 }
 
-a.button {
-    display: block;
-    max-width: 200px;
-    margin: 2em auto 2em;
-    padding: 1em;
-    font-size: 16pt;
-    text-decoration: none;
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 1px $magenta-3;
-    border-radius: 5px;
-    border-style: solid;
-
-    background-color: $magenta-1;
-    border-color: $magenta-3;
-    border-width: 0 4px 4px 0;
-}
-
-a.button:hover {
-    background-color: $magenta-4;
-    border-color: $magenta-2;
-}
-
-a.button:active {
-    background-color   : $magenta-4;
-    border-bottom-color: $magenta-2;
-    border-right-color : $magenta-2;
-    border-width: 4px 0 0 4px;
-}
-
 // -------------------------------------
 //
 // The common parts of:
@@ -283,20 +299,24 @@ a.button:active {
     }
 }
 
-$content-padding: 20px;
+// -------------------------------------
+//
+//   - gardening tutorial
+//   - types of space
+//   - gardening tools
+//
+// -------------------------------------
+#gardening-tutorial, #types-of-space, #gardening-tools {
+    @include listicle();
+    $small-image-height : 80px;
+}
 
-@mixin listicle() {
-    padding: $content-padding;
-
-    h2 {
-        font-weight: lighter;
-        font-size: 20pt;
-        margin: 20pt 0;
-    }
-
-    p {
-        margin: 1.5em 40px;
-    }
+// -------------------------------------
+//
+// For the "climates" page
+//
+// -------------------------------------
+#climates {
 }
 
 // -------------------------------------
@@ -363,28 +383,6 @@ $content-padding: 20px;
         height: $large-image-height;
         float: right;
     }
-}
-
-// -------------------------------------
-//
-//   - gardening tutorial
-//   - types of space
-//   - gardening tools
-//
-// -------------------------------------
-#gardening-tutorial, #types-of-space, #gardening-tools {
-    @include listicle();
-    $small-image-height : 80px;
-}
-
-// -------------------------------------
-//
-// For the "climates" page
-//
-// -------------------------------------
-#climates {
-    @include listicle();
-
 }
 
 // -------------------------------------
@@ -474,5 +472,32 @@ $content-padding: 20px;
 //
 // -------------------------------------
 #got-started {
-    border: 2px dotted gray;
+    background-color: rgba(100, 255, 100, 0.1);
+    padding: $content-padding;
+
+    h1 {
+        font-family: "Comic Neue", sans-serif;
+        font-weight: lighter;
+        font-size: 28pt;
+        margin: 0.5em 0 1em;
+    }
+
+    ul {
+        font-size: 16pt;
+        list-style-type: none;
+
+        li {
+            a {
+                
+            }
+            p {
+                padding-left: 2em;
+            }
+        }
+    }
+
+    a {
+        margin: 14pt auto;
+        font-size: 14pt;
+    }
 }
