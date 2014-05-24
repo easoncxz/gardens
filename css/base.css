@@ -203,11 +203,28 @@ footer {
     font-weight: lighter;
     text-align: center;
     margin: 20px; }
-  #getting-started h2 {
-    margin: 1em 0;
-    font-family: Helvetica, sans-serif;
-    font-size: 16pt;
-    font-weight: normal; }
+  #getting-started .card {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #eee;
+    box-shadow: 1px 1px 2px 1px #888; }
+    #getting-started .card h2 {
+      margin: 1em 1em;
+      font-family: Helvetica, sans-serif;
+      font-size: 16pt;
+      font-weight: normal; }
+    #getting-started .card .options {
+      position: relative;
+      overflow: auto;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row; }
+      #getting-started .card .options .option {
+        flex-grow: 1;
+        margin: 15px;
+        padding: 1em;
+        background-color: #fff; }
 
 #got-started {
-  border: 2px dotted grey; }
+  border: 2px dotted gray; }
