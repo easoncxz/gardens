@@ -61,6 +61,14 @@ $content-padding: 20px;
     }
 }
 
+a {
+    text-decoration: none;
+    color: $dark-green-3;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 a.button {
     display: block;
@@ -292,7 +300,7 @@ footer {
 #gardening-tutorial, #crops, #climates, #types-of-space, #gardening-tools {
 
     h1 {
-        margin: 20pt 0;
+        margin: 10px 0 20px;
         font-weight: lighter;
         font-size: 26pt;
         text-align: center;
@@ -317,6 +325,8 @@ footer {
 //
 // -------------------------------------
 #climates {
+    @include listicle();
+
 }
 
 // -------------------------------------
@@ -326,44 +336,67 @@ footer {
 // -------------------------------------
 #crops {
     $small-image-height : 80px;
-    $filters-width : 200px;
-    $active-filters-height : 22px;
 
-    padding: $content-padding;
-
-    #filter-conditions {
-        //position: absolute;
-        width: $filters-width;
-        float: left;
-        background: #fee;
-
-        ul {
-            margin-left: 2em;
-        }
+    ul {
+        list-style-type: none; 
     }
 
-    #crop-list-wrapper {
-        margin-left: $filters-width + 20px;
+    #crops-content {
+        $filters-area-color : none;
 
-        #active-filters {
-            border: 1px dotted black;
-            
-            li {
-                float: left;
-                margin-right: 2em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: top;
+
+        ul#filter-conditions {
+            flex: 1;
+            max-width: 200px;
+            padding: 1em;
+            background: $filters-area-color;
+
+            > li {
+                padding-bottom: 1em;
+                border-right: 4px solid #ddd;
+
+                p {
+                    font-size: 16pt;
+                }
+
+                ul {
+                    margin-left: 1em;
+                }
             }
         }
 
-        #crop-list {
-            margin-top: $active-filters-height;
-            background: #efe;
+        #crop-list-wrapper {
+            flex: 1;
 
-            li {
-                overflow: auto;
-                width: 100%;
-                img {
-                    float: right;
-                    height: $small-image-height;
+            #active-filters {
+                background-color: $filters-area-color;
+                padding: 0.5em;
+                border-bottom: 4px solid #ddd;
+                
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    
+                    li {
+                        margin-right: 2em;
+                    }
+                }
+            }
+
+            #crop-list {
+                background: #efe;
+                padding: 1em;
+
+                li {
+                    width: 100%;
+                    img {
+                        height: $small-image-height;
+                    }
                 }
             }
         }
@@ -472,7 +505,7 @@ footer {
 //
 // -------------------------------------
 #got-started {
-    background-color: rgba(100, 255, 100, 0.1);
+    //background-color: rgba(100, 255, 100, 0.1);
     padding: $content-padding;
 
     h1 {
@@ -487,8 +520,9 @@ footer {
         list-style-type: none;
 
         li {
+            padding-bottom: 1em;
             a {
-                
+                font-size: 20pt;
             }
             p {
                 padding-left: 2em;

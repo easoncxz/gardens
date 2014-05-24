@@ -14,6 +14,13 @@
   max-width: 900px;
   margin: 0 auto; }
 
+a {
+  text-decoration: none;
+  color: #008110; }
+
+a:hover {
+  text-decoration: underline; }
+
 a.button {
   display: block;
   max-width: 200px;
@@ -146,7 +153,7 @@ footer {
     font-size: 24pt; }
 
 #gardening-tutorial h1, #crops h1, #climates h1, #types-of-space h1, #gardening-tools h1 {
-  margin: 20pt 0;
+  margin: 10px 0 20px;
   font-weight: lighter;
   font-size: 26pt;
   text-align: center; }
@@ -160,29 +167,52 @@ footer {
   #gardening-tutorial p, #types-of-space p, #gardening-tools p {
     margin: 1.5em 40px; }
 
-#crops {
+#climates {
   padding: 20px; }
-  #crops #filter-conditions {
-    width: 200px;
-    float: left;
-    background: #fee; }
-    #crops #filter-conditions ul {
-      margin-left: 2em; }
-  #crops #crop-list-wrapper {
-    margin-left: 220px; }
-    #crops #crop-list-wrapper #active-filters {
-      border: 1px dotted black; }
-      #crops #crop-list-wrapper #active-filters li {
-        float: left;
-        margin-right: 2em; }
-    #crops #crop-list-wrapper #crop-list {
-      margin-top: 22px;
-      background: #efe; }
-      #crops #crop-list-wrapper #crop-list li {
-        overflow: auto;
+  #climates h2 {
+    font-weight: lighter;
+    font-size: 20pt;
+    margin: 20pt 0; }
+  #climates p {
+    margin: 1.5em 40px; }
+
+#crops ul {
+  list-style-type: none; }
+#crops #crops-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: top; }
+  #crops #crops-content ul#filter-conditions {
+    flex: 1;
+    max-width: 200px;
+    padding: 1em;
+    background: none; }
+    #crops #crops-content ul#filter-conditions > li {
+      padding-bottom: 1em;
+      border-right: 4px solid #ddd; }
+      #crops #crops-content ul#filter-conditions > li p {
+        font-size: 16pt; }
+      #crops #crops-content ul#filter-conditions > li ul {
+        margin-left: 1em; }
+  #crops #crops-content #crop-list-wrapper {
+    flex: 1; }
+    #crops #crops-content #crop-list-wrapper #active-filters {
+      background-color: none;
+      padding: 0.5em;
+      border-bottom: 4px solid #ddd; }
+      #crops #crops-content #crop-list-wrapper #active-filters ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; }
+        #crops #crops-content #crop-list-wrapper #active-filters ul li {
+          margin-right: 2em; }
+    #crops #crops-content #crop-list-wrapper #crop-list {
+      background: #efe;
+      padding: 1em; }
+      #crops #crops-content #crop-list-wrapper #crop-list li {
         width: 100%; }
-        #crops #crop-list-wrapper #crop-list li img {
-          float: right;
+        #crops #crops-content #crop-list-wrapper #crop-list li img {
           height: 80px; }
 
 .crop {
@@ -243,7 +273,6 @@ footer {
     margin: 60px auto; }
 
 #got-started {
-  background-color: rgba(100, 255, 100, 0.1);
   padding: 20px; }
   #got-started h1 {
     font-family: "Comic Neue", sans-serif;
@@ -253,8 +282,12 @@ footer {
   #got-started ul {
     font-size: 16pt;
     list-style-type: none; }
-    #got-started ul li p {
-      padding-left: 2em; }
+    #got-started ul li {
+      padding-bottom: 1em; }
+      #got-started ul li a {
+        font-size: 20pt; }
+      #got-started ul li p {
+        padding-left: 2em; }
   #got-started a {
     margin: 14pt auto;
     font-size: 14pt; }
