@@ -267,14 +267,51 @@ footer {
 
 // -------------------------------------
 //
+// The common parts of:
+//   - gardening tutorial
+//   - types of space
+//   - gardening tools
+//   - climates page
+//
+// -------------------------------------
+
+#gardening-tutorial, #crops, #climates, #types-of-space, #gardening-tools {
+
+    h1 {
+        margin: 20pt 0;
+        font-weight: lighter;
+        font-size: 26pt;
+        text-align: center;
+    }
+}
+
+$content-padding: 20px;
+
+@mixin listicle() {
+    padding: $content-padding;
+
+    h2 {
+        font-weight: lighter;
+        font-size: 20pt;
+        margin: 20pt 0;
+    }
+
+    p {
+        margin: 1.5em 40px;
+    }
+}
+
+// -------------------------------------
+//
 // For the list-of-crops page:
 //
 // -------------------------------------
 #crops {
-    
     $small-image-height : 80px;
     $filters-width : 200px;
     $active-filters-height : 22px;
+
+    padding: $content-padding;
 
     #filter-conditions {
         //position: absolute;
@@ -332,37 +369,6 @@ footer {
 
 // -------------------------------------
 //
-// The common parts of:
-//   - gardening tutorial
-//   - types of space
-//   - gardening tools
-//   - climates page
-//
-// -------------------------------------
-@mixin listicle() {
-    padding: 20px;
-
-    h1 {
-        margin: 20pt 0;
-        font-weight: lighter;
-        font-size: 26pt;
-        text-align: center;
-    }
-
-    h2 {
-        font-weight: lighter;
-        font-size: 20pt;
-        margin: 20pt 0;
-    }
-
-    p {
-        //padding-left: 40px;
-        margin: 1.5em 40px;
-    }
-}
-
-// -------------------------------------
-//
 //   - gardening tutorial
 //   - types of space
 //   - gardening tools
@@ -389,7 +395,23 @@ footer {
 //
 // -------------------------------------
 #getting-started {
-    border: 2px dotted grey;
+    $p : 20px;
+    margin: $p; 
+
+    h1 {
+        font-family: "Comic Neue", sans-serif;
+        font-size: 30pt;
+        font-weight: lighter;
+        text-align: center;
+        margin: $p;
+    }
+
+    h2 {
+        margin: 1em 0;
+        font-family: Helvetica, sans-serif;
+        font-size: 16pt;
+        font-weight: normal;
+    }
 }
 
 // -------------------------------------

@@ -140,28 +140,36 @@ footer {
     border-right-color: #9c2765;
     border-width: 4px 0 0 4px; }
 
-#crops #filter-conditions {
-  width: 200px;
-  float: left;
-  background: #fee; }
-  #crops #filter-conditions ul {
-    margin-left: 2em; }
-#crops #crop-list-wrapper {
-  margin-left: 220px; }
-  #crops #crop-list-wrapper #active-filters {
-    border: 1px dotted black; }
-    #crops #crop-list-wrapper #active-filters li {
-      float: left;
-      margin-right: 2em; }
-  #crops #crop-list-wrapper #crop-list {
-    margin-top: 22px;
-    background: #efe; }
-    #crops #crop-list-wrapper #crop-list li {
-      overflow: auto;
-      width: 100%; }
-      #crops #crop-list-wrapper #crop-list li img {
-        float: right;
-        height: 80px; }
+#gardening-tutorial h1, #crops h1, #climates h1, #types-of-space h1, #gardening-tools h1 {
+  margin: 20pt 0;
+  font-weight: lighter;
+  font-size: 26pt;
+  text-align: center; }
+
+#crops {
+  padding: 20px; }
+  #crops #filter-conditions {
+    width: 200px;
+    float: left;
+    background: #fee; }
+    #crops #filter-conditions ul {
+      margin-left: 2em; }
+  #crops #crop-list-wrapper {
+    margin-left: 220px; }
+    #crops #crop-list-wrapper #active-filters {
+      border: 1px dotted black; }
+      #crops #crop-list-wrapper #active-filters li {
+        float: left;
+        margin-right: 2em; }
+    #crops #crop-list-wrapper #crop-list {
+      margin-top: 22px;
+      background: #efe; }
+      #crops #crop-list-wrapper #crop-list li {
+        overflow: auto;
+        width: 100%; }
+        #crops #crop-list-wrapper #crop-list li img {
+          float: right;
+          height: 80px; }
 
 .crop {
   border: 1px solid green; }
@@ -171,11 +179,6 @@ footer {
 
 #gardening-tutorial, #types-of-space, #gardening-tools {
   padding: 20px; }
-  #gardening-tutorial h1, #types-of-space h1, #gardening-tools h1 {
-    margin: 20pt 0;
-    font-weight: lighter;
-    font-size: 26pt;
-    text-align: center; }
   #gardening-tutorial h2, #types-of-space h2, #gardening-tools h2 {
     font-weight: lighter;
     font-size: 20pt;
@@ -185,11 +188,6 @@ footer {
 
 #climates {
   padding: 20px; }
-  #climates h1 {
-    margin: 20pt 0;
-    font-weight: lighter;
-    font-size: 26pt;
-    text-align: center; }
   #climates h2 {
     font-weight: lighter;
     font-size: 20pt;
@@ -198,7 +196,18 @@ footer {
     margin: 1.5em 40px; }
 
 #getting-started {
-  border: 2px dotted grey; }
+  margin: 20px; }
+  #getting-started h1 {
+    font-family: "Comic Neue", sans-serif;
+    font-size: 30pt;
+    font-weight: lighter;
+    text-align: center;
+    margin: 20px; }
+  #getting-started h2 {
+    margin: 1em 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: normal; }
 
 #got-started {
   border: 2px dotted grey; }
