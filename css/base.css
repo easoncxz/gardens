@@ -300,7 +300,9 @@ footer {
         margin: 0 auto 15px; }
       .card .options .option img {
         width: 100%; }
-    .card .options .option:hover, .card .options .option.on {
+    .card .options .option:hover {
+      border: 4px dashed #d0006e; }
+    .card .options .option.on {
       border: 4px solid #d0006e; }
 
 .card.off {

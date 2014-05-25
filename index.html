@@ -73,58 +73,6 @@ title: Gardens By Design - Home
     <div id="get-started-prompt">
         <p class="question">Are you totally new to gardening?<br>We're here to help!</p>
         <a class="button" href="getting-started.html">Get started now</a>
-        <!--
-        <a id="next">Next</a>
-        <a id="prev">Previous</a>
-        -->
     </div>
-    <script>
-    var imageWidth = 500;
-    var divSlider = $('#window-slider');
-    function goToSlide(pos) {
-        if (pos <= 4 && pos >= 0) {
-            divSlider.css('margin-left', (- pos * imageWidth) + 'px');
-        }
-    }
-    function highlightDot(dot) {
-        $('#window-dots .dot').removeClass('on');
-        dot.addClass('on');
-    }
-    var dot0 = $('#dot0');
-    var dot1 = $('#dot1');
-    var dot2 = $('#dot2');
-    var dot3 = $('#dot3');
-    var dot4 = $('#dot4');
-    dot0.on('click', function() { goToSlide(0); highlightDot(dot0); });
-    dot1.on('click', function() { goToSlide(1); highlightDot(dot1); });
-    dot2.on('click', function() { goToSlide(2); highlightDot(dot2); });
-    dot3.on('click', function() { goToSlide(3); highlightDot(dot3); });
-    dot4.on('click', function() { goToSlide(4); highlightDot(dot4); });
-
-    //var nextSlide = function() {
-    //    if (parseInt(divSlider.css('margin-left')) <= (-4 * imageWidth)) {
-    //        // do nothing
-    //    } else {
-    //        divSlider.css('margin-left', (parseInt(divSlider.css('margin-left')) - imageWidth) + 'px');
-    //    }
-    //};
-    //var prevSlide = function() {
-    //    if (parseInt(divSlider.css('margin-left')) >= 0) {
-    //        // do nothing
-    //    } else {
-    //        divSlider.css('margin-left', (parseInt(divSlider.css('margin-left')) + imageWidth) + 'px');
-    //    }
-    //};
-
-    //var btnNext = $('#next');
-    //var btnPrev = $('#prev');
-    ////btnNext.on('click', nextSlide);
-    //btnNext.on('click', function(){
-    //    goToSlide(2);
-    //});
-    ////btnPrev.on('click', prevSlide);
-    //btnPrev.on('click', function(){
-    //    goToSlide(0);
-    //});
-    </script>
+    <script src="{{ page.go_to_root }}js/index.js"></script>
 </div>

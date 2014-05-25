@@ -561,7 +561,11 @@ footer {
             }
         }
 
-        .option:hover, .option.on {
+        .option:hover {
+            border: 4px dashed $magenta-1;
+        }
+        
+        .option.on {
             border: 4px solid $magenta-1;
         }
 
