@@ -35,6 +35,7 @@ a.button {
   text-shadow: 1px 1px 1px #870047;
   border-radius: 5px;
   border-style: solid;
+  transition: opacity 1s ease-in-out;
   background-color: #d0006e;
   border-color: #870047;
   border-width: 0 4px 4px 0; }
@@ -48,6 +49,9 @@ a.button:active {
   border-bottom-color: #9c2765;
   border-right-color: #9c2765;
   border-width: 4px 0 0 4px; }
+
+a.button.off {
+  opacity: 0.3; }
 
 header {
   background-color: #259433; }
@@ -185,17 +189,21 @@ footer {
     flex-wrap: wrap; }
     #climates .card .options .option p {
       margin: 0; }
-  #climates > h2 {
-    font-family: "Comic Neue", sans-serif;
-    font-size: 22pt;
-    font-weight: lighter;
-    margin: 1em; }
-  #climates > ul {
-    margin: 40px;
-    list-style-type: none; }
-    #climates > ul li {
+  #climates #suggestion {
+    transition: opacity 1s ease-in-out; }
+    #climates #suggestion > h2 {
+      font-family: "Comic Neue", sans-serif;
       font-size: 22pt;
-      margin: 0.4em 0; }
+      font-weight: lighter;
+      margin: 1em; }
+    #climates #suggestion > ul {
+      margin: 40px;
+      list-style-type: none; }
+      #climates #suggestion > ul li {
+        font-size: 22pt;
+        margin: 0.4em 0; }
+  #climates #suggestion.off {
+    opacity: 0; }
 
 #crops {
   padding: 20px; }

@@ -84,6 +84,7 @@ a.button {
     text-shadow: 1px 1px 1px $magenta-3;
     border-radius: 5px;
     border-style: solid;
+    transition: opacity 1s ease-in-out;
 
     background-color: $magenta-1;
     border-color: $magenta-3;
@@ -100,6 +101,10 @@ a.button:active {
     border-bottom-color: $magenta-2;
     border-right-color : $magenta-2;
     border-width: 4px 0 0 4px;
+}
+
+a.button.off {
+    opacity: 0.3;
 }
 
 // -------------------------------------
@@ -361,21 +366,29 @@ footer {
         }
     }
 
-    > h2 {
-        font-family: "Comic Neue", sans-serif;
-        font-size: 22pt;
-        font-weight: lighter;
-        margin: 1em;
+    #suggestion {
+        transition: opacity 1s ease-in-out;
+
+        > h2 {
+            font-family: "Comic Neue", sans-serif;
+            font-size: 22pt;
+            font-weight: lighter;
+            margin: 1em;
+        }
+
+        > ul {
+            margin: 40px;
+            list-style-type: none;
+
+            li {
+                font-size: 22pt;
+                margin: 0.4em 0;
+            }
+        }
     }
 
-    > ul {
-        margin: 40px;
-        list-style-type: none;
-
-        li {
-            font-size: 22pt;
-            margin: 0.4em 0;
-        }
+    #suggestion.off {
+        opacity: 0;
     }
 }
 
