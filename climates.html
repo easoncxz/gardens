@@ -4,17 +4,40 @@ go_to_root: ./
 ---
 <div id="climates">
     <h1>Climate Guide</h1>
-    <h2>Please select where your garden is:</h2>
-    <ul id="location-picker">
-        <li>Auckland</li>
-        <li>2</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-    <h2>You can try out these crops:</h2>
+    <div class="card">
+        <h2>Where is your garden?</h2>
+        <div class="options">
+            <div class="option"><p> Auckland </p> </div>
+            <div class="option"><p> Bay of Plenty </p> </div>
+            <div class="option"><p> Canterbury</p></div>
+            <div class="option"><p> Gisborne</p></div>
+            <div class="option"><p> Hawke's Bay</p></div>
+            <div class="option"><p> Marlborough</p></div>
+            <div class="option"><p> Manawatu-Whanganui</p></div>
+            <div class="option"><p> Nelson</p></div>
+            <div class="option"><p> Northland </p> </div>
+            <div class="option"><p> Otago</p></div>
+            <div class="option"><p> Southland</p></div>
+            <div class="option"><p> Taranaki</p></div>
+            <div class="option"><p> Tasman</p></div>
+            <div class="option"><p> Waikato </p> </div>
+            <div class="option"><p> Wellington</p></div>
+            <div class="option"><p> West Coast</p></div>
+        </div>
+    </div>
+    <div class="card off">
+        <h2>In which season are you planning to do gardening?</h2>
+        <div class="options">
+            <div class="option"><p> Spring </p> </div>
+            <div class="option"><p> Summer </p> </div>
+            <div class="option"><p> Autumn </p></div>
+            <div class="option"><p> Winter </p></div>
+        </div>
+    </div>
+    <h2>We suggest you to try these crops:</h2>
     <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        <li><a href="{{ page.go_to_root }}crops/tomato.html">Tomatoes</a></li>
+        <li><a>Turnips</a></li>
+        <li><a>Basil</a></li>
     </ul>
 </div>
