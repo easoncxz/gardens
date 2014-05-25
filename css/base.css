@@ -288,6 +288,7 @@ footer {
     position: relative;
     overflow: auto;
     width: 100%;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: row; }
     .card .options .option {
@@ -296,7 +297,6 @@ footer {
       padding: 15px;
       border: 4px solid white;
       border-radius: 5px;
-      display: flex;
       flex-direction: column;
       align-items: center;
       background-color: #fff;
