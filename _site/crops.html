@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/base.css">
+    <script src="./js/jquery-1.11.1.js"></script>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div id="logo">
+                <a href="./index.html">
+                    Gardens By Design
+                </a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="wrapper">
+            <ul>
+                <a href="./gardening-tutorial.html" class="1"><li>Gardening Tutorial</li></a>
+                <a href="./crops.html"><li>Crops</li></a>
+                <a href="./climates.html"><li>Climates</li></a>
+                <a href="./types-of-space.html"><li>Types of Space</li></a>
+                <a href="./gardening-tools.html"><li>Gardening Tools</li></a>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrapper">
+
+<div id="crops">
+    <h1>Exploring Crops</h1>
+    <div id="crops-content">
+        <ul id="filter-conditions">
+                <li>
+                    <p>Season</p>
+                    <ul>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="season"
+                            value="spring">Spring</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="season"
+                            value="summer">Summer</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="season"
+                            value="autume">Autumn</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="season"
+                            value="winter">Winter</input>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Space type</p>
+                    <ul>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="space-type"
+                            value="patio">Patio</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="space-type"
+                            value="balcony">Balcony</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="space-type"
+                            value="rooftop">Rooftop</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="space-type"
+                            value="other">Other</input>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Difficult</p>
+                    <ul>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="difficulty"
+                            value="beginner">Beginner-friendly</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="difficulty"
+                            value="intermediate">Intermediate</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="difficulty"
+                            value="hard">Hard</input>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Cost</p>
+                    <ul>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="cost"
+                            value="cheap">Cheap</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="cost"
+                            value="average">Average</input>
+                        </li>
+                        <li>
+                            <input
+                            type="checkbox"
+                            name="cost"
+                            value="expensive">expensive</input>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        <div id="crop-list-wrapper">
+            <!--
+            <div id="active-filters">
+                <p> Active filters: </p>
+                <ul>
+                    <li>autumn</li>
+                    <li>balcony or patio</li>
+                    <li>hard</li>
+                </ul>
+            </div>
+            -->
+            <ul id="crop-list">
+                <li >
+                    <h3 class="crop-name">
+                        <a href="./crops/tomato.html">Tomato</a>
+                    </h3>
+                    <div>
+                        <div>
+                            <p>This is a common type of vege, but ...</p>
+                        </div>
+                        <img src="http://upload.wikimedia.org/wikipedia/commons/8/88/Bright_red_tomato_and_cross_section02.jpg" alt="Tomates" />
+                    </div>
+                </li>
+                <li >
+                    <h3 class="crop-name">
+                        <a>Mushrooms</a>
+                    </h3>
+                    <div>
+                        <div>
+                            <p>Mushrooms are ...</p>
+                        </div>
+                        <img src="http://whatscookingamerica.net/Mushrooms.jpg" alt="Mushrooms" />
+                    </div>
+                </li>
+                <li >
+                    <h3 class="crop-name">
+                        <a>Parsley</a>
+                    </h3>
+                    <div>
+                        <div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus, lectus vitae venenatis vehicula, urna massa mollis nulla, a bibendum leo odio eget magna. Aliquam varius molestie nunc a porta. Nunc dictum luctus felis, ut hendrerit purus ornare ut. </p>
+                        </div>
+                        <img src="https://www.kmart.com/community/files/2013/04/bouquet-of-parsley-new.jpg" alt="Parsley" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <footer>
+        Footer here.
+    </footer>
+</body>
+</html>
