@@ -176,44 +176,54 @@ footer {
   #climates p {
     margin: 1.5em 40px; }
 
-#crops ul {
-  list-style-type: none; }
-#crops #crops-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: top; }
-  #crops #crops-content ul#filter-conditions {
-    flex: 1;
-    max-width: 200px;
-    padding: 1em;
-    background: none; }
-    #crops #crops-content ul#filter-conditions > li {
-      padding-bottom: 1em;
-      border-right: 4px solid #ddd; }
-      #crops #crops-content ul#filter-conditions > li p {
-        font-size: 16pt; }
-      #crops #crops-content ul#filter-conditions > li ul {
-        margin-left: 1em; }
-  #crops #crops-content #crop-list-wrapper {
-    flex: 1; }
-    #crops #crops-content #crop-list-wrapper #active-filters {
-      background-color: none;
-      padding: 0.5em;
-      border-bottom: 4px solid #ddd; }
-      #crops #crops-content #crop-list-wrapper #active-filters ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start; }
-        #crops #crops-content #crop-list-wrapper #active-filters ul li {
-          margin-right: 2em; }
-    #crops #crops-content #crop-list-wrapper #crop-list {
-      background: #efe;
-      padding: 1em; }
-      #crops #crops-content #crop-list-wrapper #crop-list li {
-        width: 100%; }
-        #crops #crops-content #crop-list-wrapper #crop-list li img {
-          height: 80px; }
+#crops {
+  padding: 20px; }
+  #crops ul {
+    list-style-type: none; }
+  #crops #crops-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: top; }
+    #crops #crops-content ul#filter-conditions {
+      flex: 1;
+      max-width: 200px;
+      padding: 1em;
+      background: none; }
+      #crops #crops-content ul#filter-conditions > li {
+        padding-bottom: 1em;
+        border-right: 4px solid #ddd; }
+        #crops #crops-content ul#filter-conditions > li p {
+          font-size: 16pt; }
+        #crops #crops-content ul#filter-conditions > li ul {
+          margin-left: 1em; }
+          #crops #crops-content ul#filter-conditions > li ul > li {
+            margin: 0.2em 0; }
+    #crops #crops-content #crop-list-wrapper {
+      flex: 1; }
+      #crops #crops-content #crop-list-wrapper #active-filters {
+        background-color: none;
+        padding: 0.5em;
+        border-bottom: 4px solid #ddd; }
+        #crops #crops-content #crop-list-wrapper #active-filters ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start; }
+          #crops #crops-content #crop-list-wrapper #active-filters ul li {
+            margin-right: 2em; }
+      #crops #crops-content #crop-list-wrapper #crop-list {
+        padding: 1em; }
+        #crops #crops-content #crop-list-wrapper #crop-list li {
+          margin-bottom: 2em; }
+          #crops #crops-content #crop-list-wrapper #crop-list li > div {
+            display: flex;
+            margin-top: 0.5em; }
+            #crops #crops-content #crop-list-wrapper #crop-list li > div > div {
+              flex: 1;
+              margin-left: 2em;
+              margin-right: 1em; }
+            #crops #crops-content #crop-list-wrapper #crop-list li > div img {
+              height: 100px; }
 
 .crop {
   border: 1px solid green; }

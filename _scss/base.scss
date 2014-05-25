@@ -335,7 +335,8 @@ footer {
 //
 // -------------------------------------
 #crops {
-    $small-image-height : 80px;
+    $small-image-height : 100px;
+    padding: 20px;
 
     ul {
         list-style-type: none; 
@@ -365,6 +366,13 @@ footer {
 
                 ul {
                     margin-left: 1em;
+
+                    > li {
+                        margin: 0.2em 0;
+
+                        input[type='checkbox'] {
+                        }
+                    }
                 }
             }
         }
@@ -389,13 +397,24 @@ footer {
             }
 
             #crop-list {
-                background: #efe;
                 padding: 1em;
 
                 li {
-                    width: 100%;
-                    img {
-                        height: $small-image-height;
+                    margin-bottom: 2em;
+
+                    > div {
+                        display: flex;
+                        margin-top: 0.5em;
+
+                        > div {
+                            flex: 1;
+                            margin-left: 2em;
+                            margin-right: 1em;
+                        }
+
+                        img {
+                            height: $small-image-height;
+                        }
                     }
                 }
             }
