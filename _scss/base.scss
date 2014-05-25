@@ -428,12 +428,31 @@ footer {
 //
 // -------------------------------------
 .crop {
-    $large-image-height : 100px;
+    $large-image-height : 200px;
 
-    border: 1px solid green;
+    position: relative;
+    overflow: auto;
+    padding: 20px;
+
+    h1 {
+        font-family: serif;
+        margin: 0.5em 0;
+    }
+
     img {
-        height: $large-image-height;
         float: right;
+        height: $large-image-height;
+        margin: 20px;
+        box-shadow: 0 0 2px 2px #eee;
+    }
+
+    h2 {
+        font-weight: lighter;
+        margin: 1em 0 1em;
+    }
+
+    p {
+        padding-left: 2em;
     }
 }
 
