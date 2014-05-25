@@ -6,7 +6,7 @@
             $(this).toggleClass('on');
             var n = $(this).parents('.card').next();
             n.toggleClass('off');
-            $('body').animate({
+            $('html, body').animate({
                 scrollTop: n.offset().top
             }, 1000);
         }
