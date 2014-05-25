@@ -180,6 +180,7 @@ footer {
     padding: 40px 0 100px;
     background-color: #ddd;
     text-align: center;
+    font-family: sans-serif;
 }  
 
 // -------------------------------------
@@ -210,6 +211,7 @@ footer {
                 height: $slide-height;
                 float: left;
                 position: relative;
+                font-family: sans-serif;
 
                 .image {
                     width: $image-width;
@@ -306,6 +308,7 @@ footer {
 
     h1 {
         margin: 10px 0 20px;
+        font-family: sans-serif;
         font-weight: lighter;
         font-size: 26pt;
         text-align: center;
@@ -323,6 +326,7 @@ footer {
     @include listicle();
     $small-image-height : 80px;
     margin-bottom: 40px;
+    font-family: sans-serif;
 
     .row {
         display: flex;
@@ -412,6 +416,7 @@ footer {
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: top;
+        font-family: sans-serif;
 
         ul#filter-conditions {
             flex: 1;
@@ -464,6 +469,10 @@ footer {
 
                 li {
                     margin-bottom: 2em;
+
+                    h3 {
+                        font-family: serif;
+                    }
 
                     > div {
                         display: flex;
@@ -635,9 +644,11 @@ footer {
             padding-bottom: 1em;
             a {
                 font-size: 20pt;
+                font-family: serif;
             }
             p {
                 padding-left: 2em;
+                font-family: sans-serif;
             }
         }
     }
