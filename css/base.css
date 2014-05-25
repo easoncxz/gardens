@@ -288,7 +288,6 @@ footer {
     position: relative;
     overflow: auto;
     width: 100%;
-    display: flex;
     flex-wrap: nowrap;
     flex-direction: row; }
     .card .options .option {
