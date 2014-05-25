@@ -86,7 +86,7 @@ nav {
         background-color: #39e24d; }
 
 footer {
-  padding: 40px 0;
+  padding: 40px 0 100px;
   background-color: #ddd;
   text-align: center; }
 
@@ -159,13 +159,23 @@ footer {
   text-align: center; }
 
 #gardening-tutorial, #types-of-space, #gardening-tools {
-  padding: 20px; }
+  padding: 20px;
+  margin-bottom: 40px; }
   #gardening-tutorial h2, #types-of-space h2, #gardening-tools h2 {
     font-weight: lighter;
     font-size: 20pt;
     margin: 20pt 0; }
   #gardening-tutorial p, #types-of-space p, #gardening-tools p {
     margin: 1.5em 40px; }
+  #gardening-tutorial .row, #types-of-space .row, #gardening-tools .row {
+    display: flex;
+    background-color: #eee;
+    box-shadow: 0 0 2px 2px #eee; }
+    #gardening-tutorial .row .description, #types-of-space .row .description, #gardening-tools .row .description {
+      flex: 1; }
+    #gardening-tutorial .row img, #types-of-space .row img, #gardening-tools .row img {
+      max-height: 200px;
+      box-shadow: 0 0 2px 2px #eee; }
 
 #climates {
   padding: 20px; }
@@ -304,6 +314,8 @@ footer {
     font-weight: lighter;
     text-align: center;
     margin: 30px; }
+  #getting-started .card.no-image .options .option p {
+    margin: 15px auto; }
   #getting-started a {
     margin: 60px auto; }
 

@@ -2,26 +2,33 @@
 layout: base
 go_to_root: ./
 ---
-<style>
-nav a.1 {
-    background: blue;
-}
-</style>
 <div id="gardening-tools">
     <h1>Gardening Tools</h1>
     <h2>Water Can</h2>
-    <img
-        src=""
-        alt="a water can" />
-    <p>Water cans are ...</p>
+    <div class="row">
+        <div class="description">
+            <p>Water cans are ....</p>
+        </div>
+        <img
+            src="{{ page.go_to_root }}images/tools-water-can.jpg"
+            alt="A water can" />
+    </div>
     <h2>Shovel</h2>
-    <img
-        src=""
-        alt="a shovel" />
-    <p>If you only garden in small pots, a shovel ...</p>
+    <div class="row">
+        <div class="description">
+            <p>Shovels are ....</p>
+        </div>
+        <img
+            src="{{ page.go_to_root }}images/tools-shovel.jpg"
+            alt="A shovel" />
+    </div>
     <h2>Garden Fork</h2>
-    <img
-        src=""
-        alt="a garden fork" />
-    <p>A garden fork ...</p>
+    <div class="row">
+        <div class="description">
+            <p>Garden forks might be ...</p>
+        </div>
+        <img
+            src="{{ page.go_to_root }}images/tools-garden-fork.jpg"
+            alt="A garden fork" />
+    </div>
 </div>

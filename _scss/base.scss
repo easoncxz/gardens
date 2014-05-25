@@ -172,7 +172,7 @@ nav {
 }
 
 footer {
-    padding: 40px 0;
+    padding: 40px 0 100px;
     background-color: #ddd;
     text-align: center;
 }  
@@ -317,6 +317,22 @@ footer {
 #gardening-tutorial, #types-of-space, #gardening-tools {
     @include listicle();
     $small-image-height : 80px;
+    margin-bottom: 40px;
+
+    .row {
+        display: flex;
+        background-color: #eee;
+        box-shadow: 0 0 2px 2px #eee;
+
+        .description {
+            flex: 1;
+        }
+
+        img {
+            max-height: 200px;
+            box-shadow: 0 0 2px 2px #eee;
+        }
+    }
 }
 
 // -------------------------------------
@@ -568,7 +584,8 @@ footer {
         margin: $p;
     }
 
-    .card {
+    .card.no-image .options .option p {
+        margin: 15px auto;
     }
 
     a {
